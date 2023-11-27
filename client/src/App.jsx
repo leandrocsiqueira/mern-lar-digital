@@ -1,5 +1,18 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Inicio from './pages/Inicio';
+import Entrar from './pages/Entrar';
+import Registrar from './pages/Registrar';
+import Sobre from './pages/sobre';
+import Perfil from './pages/Perfil';
 
 export default function App() {
-  return <h1 className="text-red-500">App</h1>;
+  return <BrowserRouter>
+    <Routes>
+      <Route path="/" element={ <Inicio /> } />
+      <Route path="/entrar" element={ <Entrar /> } />
+      <Route path="/registrar" element={ <Registrar /> } />
+      <Route path="/sobre" element={ <Sobre /> } />
+      <Route path="/perfil" element={ <Perfil /> } />
+    </Routes>
+  </BrowserRouter>
 }
